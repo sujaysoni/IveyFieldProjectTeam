@@ -43,6 +43,7 @@
       margin: 0 auto;
     }
 
+    /* ── Header ── */
     .site-header {
       position: sticky;
       top: 0;
@@ -71,210 +72,116 @@
     }
 
     .brand-mark {
-      width: 42px;
-      height: 42px;
+      width: 42px; height: 42px;
       border-radius: 12px;
       background: linear-gradient(145deg, var(--ivey-green), var(--ivey-green-2));
       position: relative;
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
     }
-
-    .brand-mark::before,
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      background: rgba(255,255,255,0.92);
-      border-radius: 999px;
+    .brand-mark::before, .brand-mark::after {
+      content: ""; position: absolute;
+      background: rgba(255,255,255,0.92); border-radius: 999px;
     }
-
-    .brand-mark::before {
-      inset: 9px 17px 9px 17px;
-    }
-
-    .brand-mark::after {
-      inset: 17px 9px 17px 9px;
-    }
+    .brand-mark::before { inset: 9px 17px 9px 17px; }
+    .brand-mark::after  { inset: 17px 9px 17px 9px; }
 
     .nav-links {
-      display: flex;
-      gap: 1.25rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-      font-weight: 600;
+      display: flex; gap: 1.25rem;
+      font-size: 0.95rem; color: var(--muted); font-weight: 600;
     }
 
+    /* ── Hero ── */
     .hero {
       background:
         linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
         linear-gradient(180deg, var(--ivey-green), #03392e 82%);
       color: #fff;
       padding: 5.5rem 0 4.5rem;
-      overflow: hidden;
-      position: relative;
+      overflow: hidden; position: relative;
     }
-
     .hero::after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      top: -60px;
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(249, 187, 1, 0.22), rgba(249, 187, 1, 0));
+      content: ""; position: absolute;
+      right: -80px; top: -60px;
+      width: 280px; height: 280px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(249,187,1,0.22), rgba(249,187,1,0));
     }
-
     .hero-grid {
       display: grid;
       grid-template-columns: 1.35fr 0.95fr;
-      gap: 2rem;
-      align-items: end;
+      gap: 2rem; align-items: end;
     }
-
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.5rem 0.9rem;
-      border-radius: 999px;
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      padding: 0.5rem 0.9rem; border-radius: 999px;
       background: rgba(255,255,255,0.10);
       border: 1px solid rgba(255,255,255,0.14);
-      font-size: 0.84rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-size: 0.84rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
       margin-bottom: 1.1rem;
     }
-
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; margin: 0; }
-
     h1 {
       font-size: clamp(2.4rem, 5vw, 4.5rem);
-      line-height: 1.04;
-      max-width: 11ch;
-      margin-bottom: 1.1rem;
+      line-height: 1.04; max-width: 11ch; margin-bottom: 1.1rem;
     }
-
     .hero p {
-      font-size: 1.08rem;
-      color: rgba(255,255,255,0.88);
-      max-width: 60ch;
-      margin: 0 0 1.5rem;
+      font-size: 1.08rem; color: rgba(255,255,255,0.88);
+      max-width: 60ch; margin: 0 0 1.5rem;
     }
-
     .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-top: 1.5rem;
+      display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1.5rem;
     }
-
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0.85rem 1.25rem;
-      border-radius: 999px;
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 0.85rem 1.25rem; border-radius: 999px;
       font-weight: 700;
       transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
       border: 1px solid transparent;
     }
-
     .btn:hover { transform: translateY(-1px); }
-
     .btn-primary {
-      background: var(--ivey-gold);
-      color: #173029;
-      box-shadow: 0 12px 24px rgba(249, 187, 1, 0.18);
+      background: var(--ivey-gold); color: #173029;
+      box-shadow: 0 12px 24px rgba(249,187,1,0.18);
     }
-
     .btn-secondary {
-      background: transparent;
-      color: #fff;
+      background: transparent; color: #fff;
       border-color: rgba(255,255,255,0.22);
     }
-
     .hero-panel {
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 24px;
-      padding: 1.4rem;
+      border-radius: 24px; padding: 1.4rem;
       box-shadow: 0 18px 40px rgba(0,0,0,0.14);
     }
-
-    .hero-panel h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.85rem;
-    }
-
-    .stat-list {
-      display: grid;
-      gap: 0.8rem;
-    }
-
+    .hero-panel h3 { font-size: 1.05rem; margin-bottom: 0.85rem; }
+    .stat-list { display: grid; gap: 0.8rem; }
     .stat-item {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0.9rem;
-      align-items: start;
-      padding: 0.8rem 0;
-      border-top: 1px solid rgba(255,255,255,0.12);
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 0.9rem; align-items: start;
+      padding: 0.8rem 0; border-top: 1px solid rgba(255,255,255,0.12);
     }
-
     .stat-item:first-child { border-top: none; padding-top: 0; }
-
     .stat-number {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--ivey-gold);
-      min-width: 54px;
+      font-size: 1.5rem; font-weight: 800;
+      color: var(--ivey-gold); min-width: 54px;
     }
 
-    section {
-      padding: 5rem 0;
-    }
-
-    .section-header {
-      max-width: 760px;
-      margin-bottom: 2rem;
-    }
-
+    /* ── Sections ── */
+    section { padding: 5rem 0; }
+    .section-header { max-width: 760px; margin-bottom: 2rem; }
     .section-label {
-      color: var(--ivey-green);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 800;
-      font-size: 0.8rem;
-      margin-bottom: 0.65rem;
-      display: inline-block;
+      color: var(--ivey-green); text-transform: uppercase;
+      letter-spacing: 0.12em; font-weight: 800; font-size: 0.8rem;
+      margin-bottom: 0.65rem; display: inline-block;
     }
+    h2 { font-size: clamp(1.9rem, 3vw, 3rem); color: var(--ink); margin-bottom: 0.75rem; }
+    .section-header p { color: var(--muted); margin: 0; font-size: 1.03rem; }
 
-    h2 {
-      font-size: clamp(1.9rem, 3vw, 3rem);
-      color: var(--ink);
-      margin-bottom: 0.75rem;
+    .mission-grid, .value-grid, .method-grid, .footer-grid {
+      display: grid; gap: 1.3rem;
     }
-
-    .section-header p {
-      color: var(--muted);
-      margin: 0;
-      font-size: 1.03rem;
-    }
-
-    .mission-grid,
-    .value-grid,
-    .method-grid,
-    .footer-grid {
-      display: grid;
-      gap: 1.3rem;
-    }
-
-    .mission-grid {
-      grid-template-columns: 1.2fr 0.8fr;
-      align-items: stretch;
-    }
+    .mission-grid { grid-template-columns: 1.2fr 0.8fr; align-items: stretch; }
 
     .card {
       background: #fff;
@@ -283,37 +190,26 @@
       box-shadow: var(--shadow);
       padding: 1.5rem;
     }
-
     .card.soft {
       background: linear-gradient(180deg, #fbfcfc, var(--surface));
       box-shadow: none;
     }
 
     .bullet-list {
-      padding: 0;
-      margin: 1rem 0 0;
-      list-style: none;
-      display: grid;
-      gap: 0.9rem;
+      padding: 0; margin: 1rem 0 0;
+      list-style: none; display: grid; gap: 0.9rem;
     }
-
     .bullet-list li {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0.75rem;
-      align-items: start;
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 0.75rem; align-items: start;
     }
-
     .bullet {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      margin-top: 0.45rem;
-      background: var(--ivey-gold);
-      box-shadow: 0 0 0 6px rgba(249, 187, 1, 0.14);
+      width: 12px; height: 12px; border-radius: 999px;
+      margin-top: 0.45rem; background: var(--ivey-gold);
+      box-shadow: 0 0 0 6px rgba(249,187,1,0.14);
     }
 
-    /* Team section: 6 cards across on desktop */
+    /* ── Team Grid: 6 columns on desktop ── */
     .team-grid {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -323,217 +219,169 @@
     .team-card {
       background: #fff;
       border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: transform .24s ease, box-shadow .24s ease;
-      box-shadow: 0 8px 20px rgba(3, 70, 56, 0.08);
+      border-radius: 20px;
+      padding: 1.4rem 0.9rem 1.1rem;
+      text-align: center;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      transition: transform .24s ease, box-shadow .24s ease;
+      box-shadow: 0 8px 20px rgba(3,70,56,0.08);
     }
-
     .team-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 32px rgba(3, 70, 56, 0.16);
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(3,70,56,0.15);
     }
 
-    /* Photo frame: fixed height, covers area cleanly */
-    .team-photo {
-      height: 90px;
-      width: 100%;
-      background: linear-gradient(135deg, #dceae5, #f7fbf9);
-      display: grid;
-      place-items: center;
-      color: var(--ivey-green);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 1.25rem;
-      letter-spacing: 0.05em;
+    /* ── Circular avatar ── */
+    .avatar-wrap {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      padding: 3px;                                       /* ring gap */
+      background: linear-gradient(135deg, var(--ivey-gold), var(--ivey-green));
+      margin: 0 auto 1rem;
       flex-shrink: 0;
-      overflow: hidden;
     }
-
-    .team-photo img {
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(135deg, #dceae5, #f7fbf9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #fff;    /* white gap between ring and image */
+    }
+    .avatar-inner img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center top;
       display: block;
+      border-radius: 50%;
+    }
+    .avatar-initials {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--ivey-green);
+      letter-spacing: 0.04em;
     }
 
+    /* ── Card text ── */
     .team-body {
-      padding: 0.85rem 0.9rem 1rem;
       display: flex;
       flex-direction: column;
-      flex: 1;
+      align-items: center;
+      width: 100%;
     }
-
     .team-body h3 {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: var(--ink);
       margin-bottom: 0.15rem;
+      text-align: center;
     }
-
     .team-email {
       display: block;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       color: var(--muted);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.45rem;
       word-break: break-all;
+      text-align: center;
     }
-
-    .team-email:hover {
-      color: var(--ivey-green);
-      text-decoration: underline;
-    }
-
+    .team-email:hover { color: var(--ivey-green); text-decoration: underline; }
     .team-role {
       color: var(--ivey-green);
       font-weight: 700;
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       margin-bottom: 0.5rem;
+      text-align: center;
     }
-
     .team-copy {
       color: var(--muted);
-      font-size: 0.82rem;
-      flex: 1;
+      font-size: 0.78rem;
+      text-align: center;
+      line-height: 1.5;
     }
-
     .team-link {
       display: inline-flex;
-      margin-top: 0.75rem;
+      margin-top: 0.8rem;
       color: var(--ivey-green);
       font-weight: 700;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
+      align-items: center;
+      gap: 0.2rem;
     }
-
     .team-link:hover { text-decoration: underline; }
 
-    .method-grid,
-    .value-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
+    /* ── Other sections ── */
+    .method-grid, .value-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .icon-box {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      background: rgba(3, 70, 56, 0.08);
-      color: var(--ivey-green);
-      display: grid;
-      place-items: center;
-      margin-bottom: 1rem;
+      width: 54px; height: 54px; border-radius: 16px;
+      background: rgba(3,70,56,0.08); color: var(--ivey-green);
+      display: grid; place-items: center; margin-bottom: 1rem;
     }
-
     .icon-box svg { width: 26px; height: 26px; }
-
     .accent-band {
       background: linear-gradient(180deg, var(--surface), #fff);
-      border-top: 1px solid rgba(3, 70, 56, 0.07);
-      border-bottom: 1px solid rgba(3, 70, 56, 0.07);
+      border-top: 1px solid rgba(3,70,56,0.07);
+      border-bottom: 1px solid rgba(3,70,56,0.07);
     }
 
+    /* ── Footer ── */
     footer {
       background: var(--ivey-green);
       color: rgba(255,255,255,0.88);
       padding: 3rem 0 2.4rem;
     }
-
-    .footer-grid {
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: start;
-    }
-
+    .footer-grid { grid-template-columns: 1.1fr 0.9fr; align-items: start; }
     .footer-title {
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.2rem;
-      margin-bottom: 0.7rem;
+      color: #fff; font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem; margin-bottom: 0.7rem;
     }
-
-    .footer-meta {
-      color: rgba(255,255,255,0.72);
-      font-size: 0.95rem;
-    }
-
+    .footer-meta { color: rgba(255,255,255,0.72); font-size: 0.95rem; }
     .footer-links {
-      margin-top: 1.5rem;
-      padding-top: 1.25rem;
+      margin-top: 1.5rem; padding-top: 1.25rem;
       border-top: 1px solid rgba(255,255,255,0.14);
     }
-
-    .footer-links .footer-title {
-      font-size: 1rem;
-      margin-bottom: 0.6rem;
-    }
-
+    .footer-links .footer-title { font-size: 1rem; margin-bottom: 0.6rem; }
     .footer-links ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 0.5rem;
     }
-
     .footer-links ul li a {
-      color: var(--ivey-gold);
-      font-size: 0.92rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: opacity 0.2s;
+      color: var(--ivey-gold); font-size: 0.92rem;
+      font-weight: 600; text-decoration: none; transition: opacity 0.2s;
     }
-
-    .footer-links ul li a:hover {
-      opacity: 0.8;
-      text-decoration: underline;
-    }
-
+    .footer-links ul li a:hover { opacity: 0.8; text-decoration: underline; }
     .small-note {
-      margin-top: 2rem;
-      padding-top: 1.25rem;
+      margin-top: 2rem; padding-top: 1.25rem;
       border-top: 1px solid rgba(255,255,255,0.14);
-      font-size: 0.92rem;
-      color: rgba(255,255,255,0.72);
+      font-size: 0.92rem; color: rgba(255,255,255,0.72);
     }
 
-    /* Responsive breakpoints */
+    /* ── Responsive ── */
     @media (max-width: 1100px) {
-      .team-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
+      .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
-
     @media (max-width: 980px) {
-      .hero-grid,
-      .mission-grid,
-      .footer-grid,
-      .method-grid,
-      .value-grid {
+      .hero-grid, .mission-grid, .footer-grid, .method-grid, .value-grid {
         grid-template-columns: 1fr;
       }
-
-      .nav-links {
-        display: none;
-      }
-
+      .nav-links { display: none; }
       h1 { max-width: 14ch; }
     }
-
     @media (max-width: 640px) {
       .hero { padding: 4.5rem 0 3.7rem; }
       section { padding: 4rem 0; }
       .btn { width: 100%; }
       .hero-actions { flex-direction: column; }
-      .team-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-
     @media (max-width: 400px) {
-      .team-grid {
-        grid-template-columns: 1fr;
-      }
+      .team-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -648,8 +496,10 @@
 
           <!-- Sujay Soni -->
           <article class="team-card">
-            <div class="team-photo">
-              <img src="sujay.jpeg" alt="Sujay Soni" />
+            <div class="avatar-wrap">
+              <div class="avatar-inner">
+                <img src="sujay.jpeg" alt="Sujay Soni" />
+              </div>
             </div>
             <div class="team-body">
               <h3>Sujay Soni</h3>
@@ -662,7 +512,11 @@
 
           <!-- Mikayla Zhao -->
           <article class="team-card">
-            <div class="team-photo">MZ</div>
+            <div class="avatar-wrap">
+              <div class="avatar-inner">
+                <span class="avatar-initials">MZ</span>
+              </div>
+            </div>
             <div class="team-body">
               <h3>Mikayla Zhao</h3>
               <a class="team-email" href="mailto:mzhao.mba2027@ivey.ca">mzhao.mba2027@ivey.ca</a>
@@ -674,7 +528,11 @@
 
           <!-- Billy Sun -->
           <article class="team-card">
-            <div class="team-photo">BS</div>
+            <div class="avatar-wrap">
+              <div class="avatar-inner">
+                <span class="avatar-initials">BS</span>
+              </div>
+            </div>
             <div class="team-body">
               <h3>Billy Sun</h3>
               <a class="team-email" href="mailto:bsun.mba2027@ivey.ca">bsun.mba2027@ivey.ca</a>
@@ -686,7 +544,11 @@
 
           <!-- Waleed Saqr -->
           <article class="team-card">
-            <div class="team-photo">WS</div>
+            <div class="avatar-wrap">
+              <div class="avatar-inner">
+                <span class="avatar-initials">WS</span>
+              </div>
+            </div>
             <div class="team-body">
               <h3>Waleed Saqr</h3>
               <a class="team-email" href="mailto:wsaqr.mba2027@ivey.ca">wsaqr.mba2027@ivey.ca</a>
@@ -698,7 +560,11 @@
 
           <!-- Bav Sinnathamby -->
           <article class="team-card">
-            <div class="team-photo">BV</div>
+            <div class="avatar-wrap">
+              <div class="avatar-inner">
+                <span class="avatar-initials">BV</span>
+              </div>
+            </div>
             <div class="team-body">
               <h3>Bav Sinnathamby</h3>
               <a class="team-email" href="mailto:bsinnathamby.mba2027@ivey.ca">bsinnathamby.mba2027@ivey.ca</a>
@@ -710,7 +576,11 @@
 
           <!-- Jessie Li -->
           <article class="team-card">
-            <div class="team-photo">JL</div>
+            <div class="avatar-wrap">
+              <div class="avatar-inner">
+                <span class="avatar-initials">JL</span>
+              </div>
+            </div>
             <div class="team-body">
               <h3>Jessie Li</h3>
               <a class="team-email" href="mailto:jli.mba2027@ivey.ca">jli.mba2027@ivey.ca</a>
@@ -801,7 +671,7 @@
         <li><a href="https://www.ivey.uwo.ca/mma/courses/ivey-field-project/" target="_blank" rel="noopener noreferrer">MMA IFP Course Page — ivey.uwo.ca/mma/courses/ivey-field-project/</a></li>
       </ul>
     </div>
-    <div class="container small-note">When photos are ready, upload them directly to the repo root (same folder as index.html) and reference them as src="filename.jpeg" in the team card.</div>
+    <div class="container small-note">To add a photo: upload the image file to the repo root, then replace the avatar-initials span inside that person's avatar-inner div with: &lt;img src="filename.jpeg" alt="Name" /&gt;</div>
   </footer>
 </body>
 </html>
