@@ -22,7 +22,7 @@
       --border: rgba(3, 70, 56, 0.12);
       --shadow: 0 12px 30px rgba(3, 70, 56, 0.10);
       --radius: 18px;
-      --content: 1180px;
+      --content: 1280px;
     }
 
     * { box-sizing: border-box; }
@@ -313,67 +313,91 @@
       box-shadow: 0 0 0 6px rgba(249, 187, 1, 0.14);
     }
 
+    /* ── Team section: 6 cards across on desktop ── */
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 1rem;
     }
 
     .team-card {
       background: #fff;
       border: 1px solid var(--border);
-      border-radius: 22px;
+      border-radius: 16px;
       overflow: hidden;
       transition: transform .24s ease, box-shadow .24s ease;
-      box-shadow: 0 14px 28px rgba(3, 70, 56, 0.08);
+      box-shadow: 0 8px 20px rgba(3, 70, 56, 0.08);
+      display: flex;
+      flex-direction: column;
     }
 
     .team-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 22px 40px rgba(3, 70, 56, 0.16);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px rgba(3, 70, 56, 0.16);
     }
 
+    /* Smaller photo frame: fixed height instead of aspect-ratio 1/1 */
     .team-photo {
-      aspect-ratio: 1 / 1;
+      height: 90px;
       background: linear-gradient(135deg, #dceae5, #f7fbf9);
       display: grid;
       place-items: center;
       color: var(--ivey-green);
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
-      font-size: 1.7rem;
+      font-size: 1.25rem;
       letter-spacing: 0.05em;
+      flex-shrink: 0;
     }
 
     .team-body {
-      padding: 1.25rem;
+      padding: 0.85rem 0.9rem 1rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .team-body h3 {
-      font-size: 1.2rem;
+      font-size: 0.95rem;
       color: var(--ink);
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .team-email {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      word-break: break-all;
+    }
+
+    .team-email:hover {
+      color: var(--ivey-green);
+      text-decoration: underline;
     }
 
     .team-role {
       color: var(--ivey-green);
       font-weight: 700;
-      font-size: 0.94rem;
-      margin-bottom: 0.7rem;
+      font-size: 0.78rem;
+      margin-bottom: 0.5rem;
     }
 
     .team-copy {
       color: var(--muted);
-      font-size: 0.96rem;
-      min-height: 3.7rem;
+      font-size: 0.82rem;
+      flex: 1;
     }
 
     .team-link {
       display: inline-flex;
-      margin-top: 1rem;
+      margin-top: 0.75rem;
       color: var(--ivey-green);
       font-weight: 700;
+      font-size: 0.82rem;
     }
+
+    .team-link:hover { text-decoration: underline; }
 
     .method-grid,
     .value-grid {
@@ -422,6 +446,39 @@
       font-size: 0.95rem;
     }
 
+    .footer-links {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .footer-links .footer-title {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-links ul li a {
+      color: var(--ivey-gold);
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .footer-links ul li a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
     .small-note {
       margin-top: 2rem;
       padding-top: 1.25rem;
@@ -430,11 +487,17 @@
       color: rgba(255,255,255,0.72);
     }
 
+    /* Responsive breakpoints */
+    @media (max-width: 1100px) {
+      .team-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .mission-grid,
       .footer-grid,
-      .team-grid,
       .method-grid,
       .value-grid {
         grid-template-columns: 1fr;
@@ -452,7 +515,15 @@
       section { padding: 4rem 0; }
       .btn { width: 100%; }
       .hero-actions { flex-direction: column; }
-      .team-copy { min-height: auto; }
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 400px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -479,7 +550,7 @@
         <div>
           <div class="eyebrow">Ivey Field Project 2026</div>
           <h1>Applying the MBA toolkit to real-world disruption.</h1>
-          <p>This team page is designed to reflect the same executive-facing tone as Ivey’s IFP materials: rigorous, practical, and focused on enterprise-level opportunity. Our mandate is to translate research, analysis, and strategic judgment into recommendations a client can act on.</p>
+          <p>This team page is designed to reflect the same executive-facing tone as Ivey's IFP materials: rigorous, practical, and focused on enterprise-level opportunity. Our mandate is to translate research, analysis, and strategic judgment into recommendations a client can act on.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#team">Meet the Team</a>
             <a class="btn btn-secondary" href="#ifp">What is IFP?</a>
@@ -525,7 +596,7 @@
           <aside class="card soft">
             <h3>Suggested hero title</h3>
             <p><strong>Ivey Field Project 2026: [Client Name or Project Theme]</strong></p>
-            <p>Examples: “Ivey Field Project 2026: Reinventing Customer Growth” or “Ivey Field Project 2026: Strategy for Scalable Change.”</p>
+            <p>Examples: "Ivey Field Project 2026: Reinventing Customer Growth" or "Ivey Field Project 2026: Strategy for Scalable Change."</p>
             <p style="margin-top:1rem;color:var(--muted);">Update this once your team has aligned on the project brand, client-facing title, or consulting theme.</p>
           </aside>
         </div>
@@ -550,7 +621,7 @@
           </article>
           <article class="card soft">
             <h3>Client impact</h3>
-            <p>The end product is a professional final report and presentation intended to help the client’s leadership team move forward with clearer evidence and a stronger plan for action.</p>
+            <p>The end product is a professional final report and presentation intended to help the client's leadership team move forward with clearer evidence and a stronger plan for action.</p>
           </article>
         </div>
       </div>
@@ -561,63 +632,82 @@
         <div class="section-header">
           <span class="section-label">Meet the Team</span>
           <h2>Six consultants. One client mandate.</h2>
-          <p>Below is a ready-to-use 3x2 grid for your six team members. Right now it uses elegant placeholders, but you can replace each image block with a GitHub-hosted headshot and each LinkedIn link with the actual profile URL once you send the final details.</p>
+          <p>MBA candidates at the Ivey Business School, each bringing a distinct perspective to research, analysis, and client-ready strategic communication.</p>
         </div>
         <div class="team-grid">
+
+          <!-- Sujay Soni -->
           <article class="team-card">
-            <div class="team-photo">SJ</div>
+            <div class="team-photo">SS</div>
             <div class="team-body">
-              <h3>Sujay</h3>
+              <h3>Sujay Soni</h3>
+              <a class="team-email" href="mailto:ssoni.mba2027@ivey.ca">ssoni.mba2027@ivey.ca</a>
               <div class="team-role">IFP Consultant</div>
               <div class="team-copy">Focused on structured problem solving, evidence synthesis, and client-ready strategic communication.</div>
-              <a class="team-link" href="#">LinkedIn profile →</a>
+              <a class="team-link" href="https://www.linkedin.com/in/sujaysoni/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
             </div>
           </article>
+
+          <!-- Mikayla Zhao -->
           <article class="team-card">
-            <div class="team-photo">MK</div>
+            <div class="team-photo">MZ</div>
             <div class="team-body">
-              <h3>Mikayla</h3>
+              <h3>Mikayla Zhao</h3>
+              <a class="team-email" href="mailto:mzhao.mba2027@ivey.ca">mzhao.mba2027@ivey.ca</a>
               <div class="team-role">IFP Consultant</div>
               <div class="team-copy">Brings a collaborative lens to stakeholder insight gathering, research framing, and executive storytelling.</div>
-              <a class="team-link" href="#">LinkedIn profile →</a>
+              <a class="team-link" href="https://www.linkedin.com/in/mikayla-zhao-cim%C2%AE-61b137103/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
             </div>
           </article>
+
+          <!-- Billy Sun -->
           <article class="team-card">
-            <div class="team-photo">BL</div>
+            <div class="team-photo">BS</div>
             <div class="team-body">
-              <h3>Billy</h3>
+              <h3>Billy Sun</h3>
+              <a class="team-email" href="mailto:bsun.mba2027@ivey.ca">bsun.mba2027@ivey.ca</a>
               <div class="team-role">IFP Consultant</div>
               <div class="team-copy">Supports analytical workstreams with a focus on practical recommendations and commercial relevance.</div>
-              <a class="team-link" href="#">LinkedIn profile →</a>
+              <a class="team-link" href="https://www.linkedin.com/in/billy-sun/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
             </div>
           </article>
+
+          <!-- Waleed Saqr -->
           <article class="team-card">
-            <div class="team-photo">WA</div>
+            <div class="team-photo">WS</div>
             <div class="team-body">
-              <h3>Waleed</h3>
+              <h3>Waleed Saqr</h3>
+              <a class="team-email" href="mailto:wsaqr.mba2027@ivey.ca">wsaqr.mba2027@ivey.ca</a>
               <div class="team-role">IFP Consultant</div>
               <div class="team-copy">Approaches complex questions through disciplined analysis, cross-functional thinking, and implementation logic.</div>
-              <a class="team-link" href="#">LinkedIn profile →</a>
+              <a class="team-link" href="https://www.linkedin.com/in/waleedsaqr/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
             </div>
           </article>
+
+          <!-- Bav Sinnathamby -->
           <article class="team-card">
             <div class="team-photo">BV</div>
             <div class="team-body">
-              <h3>Bav</h3>
+              <h3>Bav Sinnathamby</h3>
+              <a class="team-email" href="mailto:bsinnathamby.mba2027@ivey.ca">bsinnathamby.mba2027@ivey.ca</a>
               <div class="team-role">IFP Consultant</div>
               <div class="team-copy">Contributes to market-facing insight development, synthesis, and the design of actionable client deliverables.</div>
-              <a class="team-link" href="#">LinkedIn profile →</a>
+              <a class="team-link" href="https://www.linkedin.com/in/bavethra-sinnathamby/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
             </div>
           </article>
+
+          <!-- Jessie Li -->
           <article class="team-card">
-            <div class="team-photo">JS</div>
+            <div class="team-photo">JL</div>
             <div class="team-body">
-              <h3>Jessie</h3>
+              <h3>Jessie Li</h3>
+              <a class="team-email" href="mailto:jli.mba2027@ivey.ca">jli.mba2027@ivey.ca</a>
               <div class="team-role">IFP Consultant</div>
               <div class="team-copy">Helps translate data, research, and team insight into polished recommendations for senior decision-makers.</div>
-              <a class="team-link" href="#">LinkedIn profile →</a>
+              <a class="team-link" href="https://www.linkedin.com/in/-jessieli/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -642,7 +732,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="M14 4v4h4"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>
             </div>
             <h3>Secondary Insights</h3>
-            <p>Industry structure, market dynamics, competitor moves, and operating benchmarks provide the external context needed to test the client’s options.</p>
+            <p>Industry structure, market dynamics, competitor moves, and operating benchmarks provide the external context needed to test the client's options.</p>
           </article>
           <article class="card">
             <div class="icon-box" aria-hidden="true">
@@ -684,14 +774,22 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-title">Ivey Field Project 2026</div>
-        <p>This page is intended as a client-facing team introduction inspired by the visual language and executive tone of Ivey’s IFP materials.</p>
+        <p>This page is intended as a client-facing team introduction inspired by the visual language and executive tone of Ivey's IFP materials.</p>
       </div>
       <div>
-        <div class="footer-title">Faculty & mentor contacts</div>
+        <div class="footer-title">Faculty &amp; mentor contacts</div>
         <p class="footer-meta">Replace this block with your Faculty Supervisor name, Executive-in-Residence name, and preferred contact details once confirmed.</p>
       </div>
     </div>
-    <div class="container small-note">GitHub Pages tip: keep all six headshots at the same aspect ratio, ideally 1:1, and save them in an /images folder so the consultant cards remain visually aligned and polished.</div>
+    <div class="container footer-links">
+      <div class="footer-title">Ivey IFP Resources</div>
+      <ul>
+        <li><a href="https://www.ivey.uwo.ca/ifp/details/" target="_blank" rel="noopener noreferrer">IFP Details — ivey.uwo.ca/ifp/details/</a></li>
+        <li><a href="https://www.ivey.uwo.ca/ifp/" target="_blank" rel="noopener noreferrer">IFP Overview — ivey.uwo.ca/ifp/</a></li>
+        <li><a href="https://www.ivey.uwo.ca/mma/courses/ivey-field-project/" target="_blank" rel="noopener noreferrer">MMA IFP Course Page — ivey.uwo.ca/mma/courses/ivey-field-project/</a></li>
+      </ul>
+    </div>
+    <div class="container small-note">When photos are ready, add them to an /images folder in the repo and replace each <code>.team-photo</code> div with an &lt;img&gt; tag pointing to the file path.</div>
   </footer>
 </body>
 </html>
