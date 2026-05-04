@@ -43,7 +43,6 @@
       margin: 0 auto;
     }
 
-    /* ── Header ── */
     .site-header {
       position: sticky;
       top: 0;
@@ -90,7 +89,6 @@
       font-size: 0.95rem; color: var(--muted); font-weight: 600;
     }
 
-    /* ── Hero ── */
     .hero {
       background:
         linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
@@ -167,7 +165,6 @@
       color: var(--ivey-gold); min-width: 54px;
     }
 
-    /* ── Sections ── */
     section { padding: 5rem 0; }
     .section-header { max-width: 760px; margin-bottom: 2rem; }
     .section-label {
@@ -209,7 +206,6 @@
       box-shadow: 0 0 0 6px rgba(249,187,1,0.14);
     }
 
-    /* ── Team Grid: 6 columns on desktop ── */
     .team-grid {
       display: grid;
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -233,12 +229,11 @@
       box-shadow: 0 18px 36px rgba(3,70,56,0.15);
     }
 
-    /* ── Circular avatar ── */
     .avatar-wrap {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      padding: 3px;                                       /* ring gap */
+      padding: 3px;
       background: linear-gradient(135deg, var(--ivey-gold), var(--ivey-green));
       margin: 0 auto 1rem;
       flex-shrink: 0;
@@ -252,7 +247,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 2px solid #fff;    /* white gap between ring and image */
+      border: 2px solid #fff;
     }
     .avatar-inner img {
       width: 100%;
@@ -270,7 +265,6 @@
       letter-spacing: 0.04em;
     }
 
-    /* ── Card text ── */
     .team-body {
       display: flex;
       flex-direction: column;
@@ -316,7 +310,6 @@
     }
     .team-link:hover { text-decoration: underline; }
 
-    /* ── Other sections ── */
     .method-grid, .value-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .icon-box {
       width: 54px; height: 54px; border-radius: 16px;
@@ -330,7 +323,6 @@
       border-bottom: 1px solid rgba(3,70,56,0.07);
     }
 
-    /* ── Footer ── */
     footer {
       background: var(--ivey-green);
       color: rgba(255,255,255,0.88);
@@ -342,6 +334,28 @@
       font-size: 1.2rem; margin-bottom: 0.7rem;
     }
     .footer-meta { color: rgba(255,255,255,0.72); font-size: 0.95rem; }
+    .footer-contact-list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 0.6rem;
+    }
+    .footer-contact-name {
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+    .footer-contact-role {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+    }
+    .footer-contact-links a {
+      color: var(--ivey-gold);
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-right: 0.9rem;
+    }
+    .footer-contact-links a:hover { text-decoration: underline; }
     .footer-links {
       margin-top: 1.5rem; padding-top: 1.25rem;
       border-top: 1px solid rgba(255,255,255,0.14);
@@ -362,7 +376,6 @@
       font-size: 0.92rem; color: rgba(255,255,255,0.72);
     }
 
-    /* ── Responsive ── */
     @media (max-width: 1100px) {
       .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
@@ -493,14 +506,8 @@
           <p>MBA candidates at the Ivey Business School, each bringing a distinct perspective to research, analysis, and client-ready strategic communication.</p>
         </div>
         <div class="team-grid">
-
-          <!-- Sujay Soni -->
           <article class="team-card">
-            <div class="avatar-wrap">
-              <div class="avatar-inner">
-                <img src="sujay.jpeg" alt="Sujay Soni" />
-              </div>
-            </div>
+            <div class="avatar-wrap"><div class="avatar-inner"><img src="sujay.jpeg" alt="Sujay Soni" /></div></div>
             <div class="team-body">
               <h3>Sujay Soni</h3>
               <a class="team-email" href="mailto:ssoni.mba2027@ivey.ca">ssoni.mba2027@ivey.ca</a>
@@ -510,13 +517,8 @@
             </div>
           </article>
 
-          <!-- Mikayla Zhao -->
           <article class="team-card">
-            <div class="avatar-wrap">
-              <div class="avatar-inner">
-                <span class="avatar-initials">MZ</span>
-              </div>
-            </div>
+            <div class="avatar-wrap"><div class="avatar-inner"><span class="avatar-initials">MZ</span></div></div>
             <div class="team-body">
               <h3>Mikayla Zhao</h3>
               <a class="team-email" href="mailto:mzhao.mba2027@ivey.ca">mzhao.mba2027@ivey.ca</a>
@@ -526,13 +528,8 @@
             </div>
           </article>
 
-          <!-- Billy Sun -->
           <article class="team-card">
-            <div class="avatar-wrap">
-              <div class="avatar-inner">
-                <span class="avatar-initials">BS</span>
-              </div>
-            </div>
+            <div class="avatar-wrap"><div class="avatar-inner"><span class="avatar-initials">BS</span></div></div>
             <div class="team-body">
               <h3>Billy Sun</h3>
               <a class="team-email" href="mailto:bsun.mba2027@ivey.ca">bsun.mba2027@ivey.ca</a>
@@ -542,13 +539,8 @@
             </div>
           </article>
 
-          <!-- Waleed Saqr -->
           <article class="team-card">
-            <div class="avatar-wrap">
-              <div class="avatar-inner">
-                <span class="avatar-initials">WS</span>
-              </div>
-            </div>
+            <div class="avatar-wrap"><div class="avatar-inner"><span class="avatar-initials">WS</span></div></div>
             <div class="team-body">
               <h3>Waleed Saqr</h3>
               <a class="team-email" href="mailto:wsaqr.mba2027@ivey.ca">wsaqr.mba2027@ivey.ca</a>
@@ -558,13 +550,8 @@
             </div>
           </article>
 
-          <!-- Bav Sinnathamby -->
           <article class="team-card">
-            <div class="avatar-wrap">
-              <div class="avatar-inner">
-                <span class="avatar-initials">BV</span>
-              </div>
-            </div>
+            <div class="avatar-wrap"><div class="avatar-inner"><span class="avatar-initials">BV</span></div></div>
             <div class="team-body">
               <h3>Bav Sinnathamby</h3>
               <a class="team-email" href="mailto:bsinnathamby.mba2027@ivey.ca">bsinnathamby.mba2027@ivey.ca</a>
@@ -574,13 +561,8 @@
             </div>
           </article>
 
-          <!-- Jessie Li -->
           <article class="team-card">
-            <div class="avatar-wrap">
-              <div class="avatar-inner">
-                <span class="avatar-initials">JL</span>
-              </div>
-            </div>
+            <div class="avatar-wrap"><div class="avatar-inner"><span class="avatar-initials">JL</span></div></div>
             <div class="team-body">
               <h3>Jessie Li</h3>
               <a class="team-email" href="mailto:jli.mba2027@ivey.ca">jli.mba2027@ivey.ca</a>
@@ -589,7 +571,6 @@
               <a class="team-link" href="https://www.linkedin.com/in/-jessieli/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -660,7 +641,24 @@
       </div>
       <div>
         <div class="footer-title">Faculty &amp; mentor contacts</div>
-        <p class="footer-meta">Replace this block with your Faculty Supervisor name, Executive-in-Residence name, and preferred contact details once confirmed.</p>
+        <div class="footer-contact-list">
+          <div>
+            <div class="footer-contact-name">Sébastien de la Lande</div>
+            <div class="footer-contact-role">Faculty</div>
+            <div class="footer-contact-links">
+              <a href="https://www.linkedin.com/in/sdelalande/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="mailto:sdelalande@ivey.ca">sdelalande@ivey.ca</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-contact-name">Sara Musa</div>
+            <div class="footer-contact-role">Faculty Assistant</div>
+            <div class="footer-contact-links">
+              <a href="https://www.linkedin.com/in/saramusa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="mailto:smusa@ivey.ca">smusa@ivey.ca</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container footer-links">
@@ -668,6 +666,7 @@
       <ul>
         <li><a href="https://www.ivey.uwo.ca/ifp/details/" target="_blank" rel="noopener noreferrer">IFP Details — ivey.uwo.ca/ifp/details/</a></li>
         <li><a href="https://www.ivey.uwo.ca/ifp/" target="_blank" rel="noopener noreferrer">IFP Overview — ivey.uwo.ca/ifp/</a></li>
+        <li><a href="https://www.ivey.uwo.ca/mma/courses/ivey-field-project/" target="_blank" rel="noopener noreferrer">MMA IFP Course Page — ivey.uwo.ca/mma/courses/ivey-field-project/</a></li>
       </ul>
     </div>
     <div class="container small-note">To add a photo: upload the image file to the repo root, then replace the avatar-initials span inside that person's avatar-inner div with: &lt;img src="filename.jpeg" alt="Name" /&gt;</div>
