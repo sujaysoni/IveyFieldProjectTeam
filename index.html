@@ -78,6 +78,12 @@
     .bullet-list li { display: grid; grid-template-columns: auto 1fr; gap: 0.75rem; align-items: start; }
     .bullet { width: 12px; height: 12px; border-radius: 999px; margin-top: 0.45rem; background: var(--ivey-gold); box-shadow: 0 0 0 6px rgba(249,187,1,0.14); flex-shrink: 0; }
 
+    /* IFP link tiles */
+    .ifp-link-grid { display: flex; gap: 1rem; margin-top: 1.3rem; flex-wrap: wrap; }
+    .ifp-link-tile { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--ivey-green); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.88rem; padding: 0.65rem 1.2rem; border-radius: 999px; border: 2px solid transparent; transition: background .2s, transform .2s, box-shadow .2s; box-shadow: 0 4px 14px rgba(3,70,56,0.18); }
+    .ifp-link-tile:hover { background: var(--ivey-green-2); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(3,70,56,0.22); }
+    .ifp-link-tile svg { width: 14px; height: 14px; flex-shrink: 0; }
+
     /* Team Grid */
     .team-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; }
     .team-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 1.4rem 0.9rem 1.1rem; text-align: center; display: flex; flex-direction: column; align-items: center; transition: transform .24s ease, box-shadow .24s ease; box-shadow: 0 8px 20px rgba(3,70,56,0.08); }
@@ -210,6 +216,16 @@
           <article class="card soft"><h3>Client Commitment</h3><p>The ongoing time commitment will vary depending on key deliverables (July, September, October) to help the team get up to speed on the company.</p></article>
           <article class="card soft"><h3>Access to Information</h3><p>To assess challenges and opportunities, the client will need to provide access to financial and other information in a timely manner.</p></article>
           <article class="card soft"><h3>Confidentiality</h3><p>The IFP faculty, student team, and staff will keep the client report confidential and will not release information or provide access to third parties without first receiving written permission from the client, producing deliverables with tangible benefits for your organization.</p></article>
+        </div>
+        <div class="ifp-link-grid">
+          <a class="ifp-link-tile" href="https://www.ivey.uwo.ca/ifp/details/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            IFP Details &#8594;
+          </a>
+          <a class="ifp-link-tile" href="https://www.ivey.uwo.ca/ifp/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            IFP Overview &#8594;
+          </a>
         </div>
       </div>
     </section>
