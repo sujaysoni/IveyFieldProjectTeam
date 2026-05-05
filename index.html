@@ -115,11 +115,10 @@
     .icon-box svg { width: 26px; height: 26px; }
     .accent-band { background: linear-gradient(180deg, var(--surface), #fff); border-top: 1px solid rgba(3,70,56,0.07); border-bottom: 1px solid rgba(3,70,56,0.07); }
 
-    /* Partner section two-column layout */
-    .partner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
+    /* Partner section single-column layout */
+    .partner-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: start; max-width: 760px; }
     .partner-grid .card h3 { font-size: 1.15rem; color: var(--ink); margin-bottom: 0.3rem; }
     .partner-grid .card .card-intro { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.25rem; }
-    @media (max-width: 760px) { .partner-grid { grid-template-columns: 1fr; } }
 
     /* Footer */
     footer { background: var(--ivey-green); color: rgba(255,255,255,0.88); padding: 3rem 0 2.4rem; }
@@ -376,17 +375,6 @@
               <li><span class="bullet"></span><span>Access guidance from an accomplished Executive-in-Residence with relevant industry experience.</span></li>
               <li><span class="bullet"></span><span>Evaluate students&rsquo; strategic capabilities first-hand &mdash; and identify future talent for your organization.</span></li>
               <li><span class="bullet"></span><span>Partner with Ivey in the hands-on education of tomorrow&rsquo;s business leaders.</span></li>
-            </ul>
-          </article>
-
-          <!-- Engagement Criteria -->
-          <article class="card soft">
-            <h3>Engagement Criteria</h3>
-            <p class="card-intro">Client applications are assessed against the following criteria.</p>
-            <ul class="bullet-list">
-              <li><span class="bullet"></span><span><strong>Strategic significance:</strong> The scope represents an issue or opportunity with organization-wide implications &mdash; such as new market or product expansion, acquisition evaluation, post-acquisition integration, or a full strategy reassessment.</span></li>
-              <li><span class="bullet"></span><span><strong>Client commitment:</strong> The client is prepared to invest meaningful time with the team, share relevant financial and operational information, and reimburse students for direct project costs (travel, supplies, and related expenses). Students cannot be financially compensated for their work.</span></li>
-              <li><span class="bullet"></span><span><strong>Timeline fit:</strong> The project scope and deliverables align with the structure and timeline of the IFP program.</span></li>
             </ul>
           </article>
 
