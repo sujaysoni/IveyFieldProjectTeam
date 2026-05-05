@@ -69,7 +69,7 @@
     h2 { font-size: clamp(1.9rem, 3vw, 3rem); color: var(--ink); margin-bottom: 0.75rem; }
     .section-header p { color: var(--muted); margin: 0; font-size: 1.03rem; }
     .mission-grid, .value-grid, .method-grid, .footer-grid { display: grid; gap: 1.3rem; }
-    .mission-grid { grid-template-columns: 1.2fr 0.8fr; align-items: stretch; }
+    .mission-grid { grid-template-columns: 1fr; align-items: stretch; }
     .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem; }
     .card.soft { background: linear-gradient(180deg, #fbfcfc, var(--surface)); box-shadow: none; }
     .bullet-list { padding: 0; margin: 1rem 0 0; list-style: none; display: grid; gap: 0.9rem; }
@@ -204,12 +204,6 @@
               <li><span class="bullet"></span><span>Translate analysis into a practical plan for action rather than an academic summary.</span></li>
             </ul>
           </article>
-          <aside class="card soft">
-            <h3>Suggested hero title</h3>
-            <p><strong>Ivey Field Project 2026: [Client Name or Project Theme]</strong></p>
-            <p>Examples: &ldquo;Ivey Field Project 2026: Reinventing Customer Growth&rdquo; or &ldquo;Ivey Field Project 2026: Strategy for Scalable Change.&rdquo;</p>
-            <p style="margin-top:1rem;color:var(--muted);">Update this once your team has aligned on the project brand, client-facing title, or consulting theme.</p>
-          </aside>
         </div>
       </div>
     </section>
@@ -430,5 +424,7 @@
         <li><a href="https://www.ivey.uwo.ca/ifp/" target="_blank" rel="noopener noreferrer">IFP Overview &mdash; ivey.uwo.ca/ifp/</a></li>
       </ul>
     </div>
+    <div class="container small-note">To add a photo: upload the image to the repo root and replace the avatar-initials span in that person&rsquo;s card with: &lt;img src=&quot;filename.jpg&quot; alt=&quot;Name&quot; /&gt;</div>
+  </footer>
 </body>
 </html>
