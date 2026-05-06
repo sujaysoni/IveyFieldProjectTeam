@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ivey Field Project 2026 | Team Landing Page</title>
-  <meta name="description" content="Professional landing page for an Ivey Field Project consulting team, designed for GitHub Pages." />
+  <title>Ivey MBA Field Project 2026 | Strategic Consulting Team</title>
+  <meta name="description" content="Six Ivey MBA consultants available for a high-impact strategic consulting engagement. Free, professional, and action-oriented." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -41,6 +41,8 @@
     .brand-mark::before { inset: 9px 17px 9px 17px; }
     .brand-mark::after  { inset: 17px 9px 17px 9px; }
     .nav-links { display: flex; gap: 1.25rem; font-size: 0.95rem; color: var(--muted); font-weight: 600; }
+    .nav-cta { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--ivey-gold); color: #173029; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.88rem; padding: 0.55rem 1.1rem; border-radius: 999px; transition: transform .2s, box-shadow .2s; box-shadow: 0 4px 12px rgba(249,187,1,0.25); }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(249,187,1,0.3); }
 
     /* Hero */
     .hero { background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)), linear-gradient(180deg, var(--ivey-green), #03392e 82%); color: #fff; padding: 5.5rem 0 4.5rem; overflow: hidden; position: relative; }
@@ -48,10 +50,8 @@
     .hero-grid { display: grid; grid-template-columns: 1.35fr 0.95fr; gap: 2rem; align-items: end; }
     .eyebrow { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.5rem 0.9rem; border-radius: 999px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.14); font-size: 0.84rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.1rem; }
     h1, h2, h3 { font-family: 'Montserrat', sans-serif; margin: 0; }
-    h1 { font-size: clamp(2.4rem, 5vw, 4.5rem); line-height: 1.04; max-width: 11ch; margin-bottom: 1.1rem; }
+    h1 { font-size: clamp(2.4rem, 5vw, 4.5rem); line-height: 1.04; max-width: 13ch; margin-bottom: 1.1rem; }
     .hero p { font-size: 1.08rem; color: rgba(255,255,255,0.88); max-width: 60ch; margin: 0 0 1.5rem; }
-    .hero p a { color: var(--ivey-gold); text-decoration: underline; }
-    .hero p a:hover { opacity: 0.85; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1.5rem; }
     .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.85rem 1.25rem; border-radius: 999px; font-weight: 700; transition: transform .22s ease, box-shadow .22s ease, background .22s ease; border: 1px solid transparent; }
     .btn:hover { transform: translateY(-1px); }
@@ -70,38 +70,25 @@
     .section-label { color: var(--ivey-green); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 800; font-size: 0.8rem; margin-bottom: 0.65rem; display: inline-block; }
     h2 { font-size: clamp(1.9rem, 3vw, 3rem); color: var(--ink); margin-bottom: 0.75rem; }
     .section-header p { color: var(--muted); margin: 0; font-size: 1.03rem; }
-    .mission-grid, .value-grid, .method-grid, .footer-grid { display: grid; gap: 1.3rem; }
-    .mission-grid { grid-template-columns: 1fr; align-items: stretch; }
+    .value-grid, .method-grid, .footer-grid { display: grid; gap: 1.3rem; }
     .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.5rem; }
     .card.soft { background: linear-gradient(180deg, #fbfcfc, var(--surface)); box-shadow: none; }
     .bullet-list { padding: 0; margin: 1rem 0 0; list-style: none; display: grid; gap: 0.9rem; }
     .bullet-list li { display: grid; grid-template-columns: auto 1fr; gap: 0.75rem; align-items: start; }
     .bullet { width: 12px; height: 12px; border-radius: 999px; margin-top: 0.45rem; background: var(--ivey-gold); box-shadow: 0 0 0 6px rgba(249,187,1,0.14); flex-shrink: 0; }
 
-    /* IFP link tiles */
-    .ifp-link-grid { display: flex; gap: 1rem; margin-top: 1.3rem; flex-wrap: wrap; }
-    .ifp-link-tile { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--ivey-green); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.88rem; padding: 0.65rem 1.2rem; border-radius: 999px; border: 2px solid transparent; transition: background .2s, transform .2s, box-shadow .2s; box-shadow: 0 4px 14px rgba(3,70,56,0.18); }
-    .ifp-link-tile:hover { background: var(--ivey-green-2); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(3,70,56,0.22); }
-    .ifp-link-tile svg { width: 14px; height: 14px; flex-shrink: 0; }
-
     /* Team Grid */
     .team-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem; }
     .team-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 1.4rem 0.9rem 1.1rem; text-align: center; display: flex; flex-direction: column; align-items: center; transition: transform .24s ease, box-shadow .24s ease; box-shadow: 0 8px 20px rgba(3,70,56,0.08); }
     .team-card:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(3,70,56,0.15); }
-
-    /* Circular avatar */
     .avatar-wrap { width: 80px; height: 80px; border-radius: 50%; padding: 3px; background: linear-gradient(135deg, var(--ivey-gold), var(--ivey-green)); margin: 0 auto 1rem; flex-shrink: 0; }
     .avatar-inner { width: 100%; height: 100%; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, #dceae5, #f7fbf9); display: flex; align-items: center; justify-content: center; border: 2px solid #fff; }
     .avatar-inner img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; border-radius: 50%; }
     .avatar-initials { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--ivey-green); letter-spacing: 0.04em; }
-
-    /* Card body */
     .team-body { display: flex; flex-direction: column; align-items: center; width: 100%; }
     .team-body h3 { font-size: 0.9rem; color: var(--ink); margin-bottom: 0.15rem; text-align: center; }
     .team-role { color: var(--ivey-green); font-weight: 700; font-size: 0.74rem; margin-bottom: 0.6rem; text-align: center; }
     .team-copy { color: var(--muted); font-size: 0.78rem; text-align: center; line-height: 1.5; flex: 1; }
-
-    /* Card action row */
     .team-actions { display: flex; flex-direction: column; align-items: center; gap: 0.45rem; margin-top: 0.85rem; width: 100%; }
     .btn-email { display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem; background: var(--ivey-green); color: #fff; font-size: 0.74rem; font-weight: 700; padding: 0.42rem 0.85rem; border-radius: 999px; transition: background .2s, transform .2s; width: 100%; }
     .btn-email:hover { background: var(--ivey-green-2); transform: translateY(-1px); }
@@ -109,147 +96,152 @@
     .team-link { display: inline-flex; color: var(--ivey-green); font-weight: 700; font-size: 0.78rem; align-items: center; gap: 0.2rem; }
     .team-link:hover { text-decoration: underline; }
 
-    /* Other sections */
-    .method-grid, .value-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    /* Methodology */
+    .method-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .icon-box { width: 54px; height: 54px; border-radius: 16px; background: rgba(3,70,56,0.08); color: var(--ivey-green); display: grid; place-items: center; margin-bottom: 1rem; }
     .icon-box svg { width: 26px; height: 26px; }
     .accent-band { background: linear-gradient(180deg, var(--surface), #fff); border-top: 1px solid rgba(3,70,56,0.07); border-bottom: 1px solid rgba(3,70,56,0.07); }
 
-    /* Partner section single-column layout */
+    /* Partner / Why IFP */
     .partner-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: start; max-width: 760px; }
     .partner-grid .card h3 { font-size: 1.15rem; color: var(--ink); margin-bottom: 0.3rem; }
     .partner-grid .card .card-intro { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.25rem; }
 
-    /* Inline text link style */
+    /* Value grid (IFP section) */
+    .value-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
     .text-link { color: var(--ivey-green); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
     .text-link:hover { color: var(--ivey-green-2); }
 
     /* ─── PROJECT TIMELINE ─────────────────────────────────────────── */
     #timeline { background: var(--surface); }
-    .tl-intro { color: var(--muted); font-size: 1.03rem; max-width: 68ch; margin: 0 0 3.5rem; }
+    .tl-intro { color: var(--muted); font-size: 1.03rem; max-width: 68ch; margin: 0 0 3rem; }
 
-    /* horizontal track */
-    .tl-track { position: relative; padding: 0 0 0.5rem; }
-    .tl-track::before {
-      content: "";
-      position: absolute;
-      top: 28px;
-      left: 0; right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--ivey-green) 0%, var(--ivey-gold) 50%, #2dce89 100%);
-      border-radius: 999px;
-      z-index: 0;
+    /* three-column phase track */
+    .tl-track { position: relative; padding-bottom: 0.5rem; }
+    .tl-connector {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
     }
-
-    .tl-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; position: relative; z-index: 1; }
-    .tl-step { display: flex; flex-direction: column; align-items: flex-start; }
-    .tl-dot-row { display: flex; align-items: center; margin-bottom: 1.25rem; }
-    .tl-dot {
-      width: 56px; height: 56px; border-radius: 50%;
+    .tl-node {
+      display: flex; flex-direction: column; align-items: center; gap: 0.55rem;
+    }
+    .tl-circle {
+      width: 64px; height: 64px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.2rem;
-      color: #fff; flex-shrink: 0;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.3rem;
+      color: #fff;
       box-shadow: 0 6px 20px rgba(0,0,0,0.15);
       border: 3px solid #fff;
     }
-    .tl-dot.phase1 { background: var(--ivey-green); }
-    .tl-dot.phase2 { background: #e07b00; }
-    .tl-dot.phase3 { background: #1a9c6a; }
+    .tl-circle.phase1 { background: var(--ivey-green); }
+    .tl-circle.phase2 { background: #e07b00; }
+    .tl-circle.phase3 { background: #1a9c6a; }
+    .tl-node-label {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em;
+      text-align: center;
+    }
+    .tl-node-label.phase1 { color: var(--ivey-green); }
+    .tl-node-label.phase2 { color: #a85a00; }
+    .tl-node-label.phase3 { color: #157a52; }
+    .tl-arrow {
+      flex: 1; height: 4px; border-radius: 999px; margin: 0 0.5rem;
+      position: relative; top: -14px;
+    }
+    .tl-arrow.a1 { background: linear-gradient(90deg, var(--ivey-green), #e07b00); }
+    .tl-arrow.a2 { background: linear-gradient(90deg, #e07b00, #1a9c6a); }
 
-    /* Accordion card */
+    /* Phase cards */
+    .tl-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     .tl-card {
       background: #fff;
       border: 1px solid var(--border);
       border-radius: 20px;
-      box-shadow: 0 8px 28px rgba(3,70,56,0.09);
-      width: 100%;
       overflow: hidden;
+      box-shadow: 0 8px 28px rgba(3,70,56,0.09);
       transition: box-shadow .22s ease;
     }
     .tl-card:hover { box-shadow: 0 16px 40px rgba(3,70,56,0.14); }
 
-    .tl-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.4rem 1.4rem;
-      cursor: pointer;
-      user-select: none;
-      gap: 1rem;
+    .tl-card-top {
+      padding: 1rem 1.3rem 0.8rem;
+      display: flex; align-items: center; gap: 0.75rem;
     }
-    .tl-card-header:hover { background: rgba(3,70,56,0.03); }
-    .tl-card-header-left { display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
+    .tl-card-top-icon {
+      width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .tl-card-top-icon.phase1 { background: rgba(3,70,56,0.10); color: var(--ivey-green); }
+    .tl-card-top-icon.phase2 { background: rgba(224,123,0,0.12); color: #a85a00; }
+    .tl-card-top-icon.phase3 { background: rgba(26,156,106,0.12); color: #157a52; }
+    .tl-card-top-icon svg { width: 18px; height: 18px; }
 
+    .tl-card-meta { flex: 1; }
     .tl-badge {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-size: 0.74rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase;
-      padding: 0.3rem 0.75rem; border-radius: 999px;
+      display: inline-flex; align-items: center;
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase;
+      padding: 0.25rem 0.65rem; border-radius: 999px; margin-bottom: 0.2rem;
       width: fit-content;
     }
     .tl-badge.phase1 { background: rgba(3,70,56,0.10); color: var(--ivey-green); }
     .tl-badge.phase2 { background: rgba(224,123,0,0.12); color: #a85a00; }
     .tl-badge.phase3 { background: rgba(26,156,106,0.12); color: #157a52; }
+    .tl-card-meta h3 { font-size: 1rem; color: var(--ink); margin: 0 0 0.1rem; }
+    .tl-due { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.78rem; color: var(--muted); display: flex; align-items: center; gap: 0.3rem; margin: 0; }
+    .tl-due svg { width: 12px; height: 12px; opacity: 0.7; }
 
-    .tl-card-header h3 { font-size: 1.05rem; color: var(--ink); margin: 0; }
-    .tl-due {
-      font-family: 'Montserrat', sans-serif; font-weight: 700;
-      font-size: 0.82rem; color: var(--muted);
-      display: flex; align-items: center; gap: 0.35rem;
-      margin: 0;
+    /* Deliverable highlight box */
+    .tl-deliverable-box {
+      margin: 0 1.3rem 0;
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      font-size: 0.83rem; font-weight: 700;
+      display: flex; align-items: center; gap: 0.5rem;
     }
-    .tl-due svg { width: 14px; height: 14px; flex-shrink: 0; opacity: 0.7; }
+    .tl-deliverable-box.phase1 { background: rgba(3,70,56,0.07); color: var(--ivey-green); }
+    .tl-deliverable-box.phase2 { background: rgba(224,123,0,0.09); color: #a85a00; }
+    .tl-deliverable-box.phase3 { background: rgba(26,156,106,0.09); color: #157a52; }
+    .tl-deliverable-box svg { width: 16px; height: 16px; flex-shrink: 0; }
 
-    .tl-chevron {
-      width: 32px; height: 32px; border-radius: 50%;
-      background: var(--surface); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      transition: transform .3s ease, background .2s;
+    /* Accordion body */
+    .tl-card-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.8rem 1.3rem;
+      cursor: pointer; user-select: none;
+      font-size: 0.82rem; color: var(--muted); font-weight: 600;
     }
-    .tl-chevron svg { width: 16px; height: 16px; color: var(--muted); transition: transform .3s ease; }
+    .tl-card-header:hover { background: rgba(3,70,56,0.02); }
+    .tl-chevron { width: 26px; height: 26px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .2s; }
+    .tl-chevron svg { width: 14px; height: 14px; color: var(--muted); transition: transform .3s ease; }
     .tl-card.open .tl-chevron { background: var(--ivey-green); border-color: var(--ivey-green); }
     .tl-card.open .tl-chevron svg { color: #fff; transform: rotate(180deg); }
 
-    .tl-card-body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s ease;
-      padding: 0 1.4rem;
-    }
-    .tl-card.open .tl-card-body {
-      max-height: 600px;
-      padding: 0 1.4rem 1.4rem;
-    }
-    .tl-card-body-inner {
-      border-top: 1px solid var(--border);
-      padding-top: 1.1rem;
-    }
+    .tl-card-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; padding: 0 1.3rem; }
+    .tl-card.open .tl-card-body { max-height: 500px; padding: 0 1.3rem 1.3rem; }
+    .tl-card-body-inner { border-top: 1px solid var(--border); padding-top: 1rem; }
 
-    .tl-deliverables { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 0.55rem; }
-    .tl-deliverables li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.88rem; color: var(--text); line-height: 1.45; }
-    .tl-check {
-      width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .tl-check.phase1 { background: rgba(3,70,56,0.10); color: var(--ivey-green); }
-    .tl-check.phase2 { background: rgba(224,123,0,0.12); color: #a85a00; }
-    .tl-check.phase3 { background: rgba(26,156,106,0.12); color: #157a52; }
-    .tl-check svg { width: 10px; height: 10px; }
+    .tl-points { list-style: none; padding: 0; margin: 0 0 0.75rem; display: grid; gap: 0.5rem; }
+    .tl-points li { display: flex; align-items: flex-start; gap: 0.55rem; font-size: 0.86rem; color: var(--text); line-height: 1.45; }
+    .tl-dot-sm { width: 6px; height: 6px; border-radius: 50%; background: var(--ivey-gold); flex-shrink: 0; margin-top: 0.5rem; }
 
-    .tl-client-action {
-      margin-top: 1rem; padding-top: 1rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.83rem; color: var(--muted); line-height: 1.5;
-    }
-    .tl-client-action strong { color: var(--ink); font-weight: 700; display: block; margin-bottom: 0.2rem; }
+    .tl-client-note { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--muted); }
+    .tl-client-note strong { color: var(--ink); font-weight: 700; display: block; margin-bottom: 0.15rem; }
 
-    @media (max-width: 980px) { .tl-steps { grid-template-columns: 1fr; } .tl-track::before { display: none; } }
+    @media (max-width: 980px) {
+      .tl-cards { grid-template-columns: 1fr; }
+      .tl-connector { display: none; }
+    }
 
     /* Footer */
     footer { background: var(--ivey-green); color: rgba(255,255,255,0.88); padding: 3rem 0 2.4rem; }
-    .footer-grid { grid-template-columns: 1.1fr 0.9fr; align-items: start; }
     .footer-title { color: #fff; font-family: 'Montserrat', sans-serif; font-size: 1.2rem; margin-bottom: 0.7rem; }
-    .footer-meta { color: rgba(255,255,255,0.72); font-size: 0.95rem; }
     .footer-contact-list { display: grid; gap: 1rem; margin-top: 0.6rem; }
     .footer-contact-name { color: #fff; font-weight: 700; margin-bottom: 0.2rem; }
     .footer-contact-role { color: rgba(255,255,255,0.72); font-size: 0.9rem; margin-bottom: 0.35rem; }
@@ -261,7 +253,7 @@
     /* Responsive */
     @media (max-width: 1100px) { .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     @media (max-width: 980px) {
-      .hero-grid, .mission-grid, .footer-grid, .method-grid, .value-grid { grid-template-columns: 1fr; }
+      .hero-grid, .footer-grid, .method-grid, .value-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       h1 { max-width: 14ch; }
     }
@@ -283,80 +275,65 @@
         <span>IFP Team 2026</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#mission">The Mission</a>
-        <a href="#ifp">What is IFP?</a>
-        <a href="#team">Consulting Team</a>
-        <a href="#methodology">Methodology</a>
-        <a href="#timeline">Project Timeline</a>
-        <a href="#partner">Partner With Us</a>
+        <a href="#mission">Our Mission</a>
+        <a href="#team">The Team</a>
+        <a href="#methodology">Our Approach</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#partner">Why Choose Us</a>
       </nav>
+      <a class="nav-cta" href="mailto:ssoni.mba2027@ivey.ca">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        Contact Us
+      </a>
     </div>
   </header>
 
   <main id="top">
+
+    <!-- ─── HERO ─────────────────────────────────────────────────── -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Ivey Field Project 2026</div>
-          <h1>Applying the MBA toolkit to real-world disruption.</h1>
-          <p>The Ivey Business School at Western University has run the MBA and HBA <a href="https://www.ivey.uwo.ca/ifp/" target="_blank" rel="noopener noreferrer">Client Field Project Program</a> for over 65 years. These clients, including General Electric, Cisco Systems and Mount Sinai Hospital have been delighted with the results of the experience and we are determined to build on these past successes with your organization.</p>
+          <div class="eyebrow">Ivey MBA Field Project 2026</div>
+          <h1>Six consultants. One mandate. Your toughest problem.</h1>
+          <p>We are a team of six Ivey MBA candidates — practitioners turned strategists — looking to partner with your organization on a high-impact consulting engagement. Our goal is simple: to support C-level decision making by bringing a fresh, rigorous, and action-oriented perspective to your most complex strategic challenges.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#timeline">See the Timeline</a>
+            <a class="btn btn-primary" href="mailto:ssoni.mba2027@ivey.ca">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;margin-right:0.4rem"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Contact Us!
+            </a>
             <a class="btn btn-secondary" href="#team">Meet the Team</a>
           </div>
         </div>
-        <aside class="hero-panel" aria-label="IFP highlights">
-          <h3>Why the Ivey Field Project matters</h3>
+        <aside class="hero-panel" aria-label="Engagement highlights">
+          <h3>What we bring to the table</h3>
           <div class="stat-list">
-            <div class="stat-item"><div class="stat-number">6</div><div>Students per consulting team working closely with a client, a faculty supervisor, and an Executive-in-Residence.</div></div>
-            <div class="stat-item"><div class="stat-number">600+</div><div>Hours of strategic consulting effort typically dedicated to an IFP engagement across the life of the project.</div></div>
-            <div class="stat-item"><div class="stat-number">1</div><div>Final report and presentation designed to help senior leaders move from analysis to execution.</div></div>
+            <div class="stat-item"><div class="stat-number">6</div><div>Diverse MBA professionals with backgrounds spanning fintech, real estate, banking, asset management, and marketing.</div></div>
+            <div class="stat-item"><div class="stat-number">600+</div><div>Hours of focused consulting effort dedicated to your mandate — at no cost to your organization.</div></div>
+            <div class="stat-item"><div class="stat-number">C-suite</div><div>Our final recommendations are designed to support executive decision making, not just answer an academic question.</div></div>
           </div>
         </aside>
       </div>
     </section>
 
+    <!-- ─── MISSION ───────────────────────────────────────────────── -->
     <section id="mission">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">The Mission</span>
-          <h2>A consulting project built for managing disruption.</h2>
-          <p>The Ivey Field Project focuses on issues of managing innovation, disruption, and large-scale change that may originate outside or inside the organization. The shock need not be technological but may include issues related to demographics, public policy, consumer preferences, labour practices, or novel business models.</p>
+          <span class="section-label">Our Mission</span>
+          <h2>Built to navigate disruption — and support the people leading through it.</h2>
+          <p>Our engagement focuses on issues of managing innovation, disruption, and large-scale change that may originate outside or inside the organization. The source of change need not be technological — it may stem from demographics, public policy, consumer preferences, labour practices, or novel business models. Our team's goal is to translate complexity into clear, decision-ready insights that support C-level leaders in choosing and executing a path forward.</p>
         </div>
       </div>
     </section>
 
-    <section id="ifp" class="accent-band">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">What is IFP?</span>
-          <h2>The cornerstone of the Ivey experience.</h2>
-          <p>The IFP is a professional consulting relationship &mdash; not a classroom simulation. Each engagement is built around significance, multidisciplinary analysis, and implementation readiness, with the client's senior leadership as the primary audience.</p>
-        </div>
-        <div class="value-grid">
-          <article class="card soft"><h3>Client Commitment</h3><p>The ongoing time commitment will vary depending on key deliverables (July, September, October) to help the team get up to speed on the company.</p></article>
-          <article class="card soft"><h3>Access to Information</h3><p>To assess challenges and opportunities, the client will need to provide access to financial and other information in a timely manner.</p></article>
-          <article class="card soft"><h3>Confidentiality</h3><p>The IFP faculty, student team, and staff will keep the client report confidential and will not release information or provide access to third parties without first receiving written permission from the client, producing deliverables with tangible benefits for your organization.</p></article>
-        </div>
-        <div class="ifp-link-grid">
-          <a class="ifp-link-tile" href="https://www.ivey.uwo.ca/ifp/details/" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            IFP Details &#8594;
-          </a>
-          <a class="ifp-link-tile" href="https://www.ivey.uwo.ca/ifp/" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            IFP Overview &#8594;
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="team">
+    <!-- ─── TEAM ──────────────────────────────────────────────────── -->
+    <section id="team" class="accent-band">
       <div class="container">
         <div class="section-header">
           <span class="section-label">Meet the Team</span>
           <h2>Six consultants. One client mandate.</h2>
-          <p>MBA candidates at the Ivey Business School, each bringing a distinct perspective to research, analysis, and client-ready strategic communication.</p>
+          <p>MBA candidates at the Ivey Business School, each bringing a distinct professional background and a shared commitment to client-ready, decision-oriented work.</p>
         </div>
         <div class="team-grid">
 
@@ -366,7 +343,7 @@
             <div class="team-body">
               <h3>Sujay Soni</h3>
               <div class="team-role">IFP Consultant</div>
-              <div class="team-copy">Senior Associate at Wealthsimple, bringing fintech and financial services expertise to uniquely disrupt the market.</div>
+              <div class="team-copy">Senior Associate at Wealthsimple, bringing fintech and financial services expertise to complex strategic challenges.</div>
               <div class="team-actions">
                 <a class="btn-email" href="mailto:ssoni.mba2027@ivey.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</a>
                 <a class="team-link" href="https://www.linkedin.com/in/sujaysoni/" target="_blank" rel="noopener noreferrer">LinkedIn &#8594;</a>
@@ -380,7 +357,7 @@
             <div class="team-body">
               <h3>Mikayla Zhao</h3>
               <div class="team-role">IFP Consultant</div>
-              <div class="team-copy">Ex-Business Development Manager at Mackenzie Investments, with deep expertise in asset management.</div>
+              <div class="team-copy">Ex-Business Development Manager at Mackenzie Investments, with deep expertise in asset management and client strategy.</div>
               <div class="team-actions">
                 <a class="btn-email" href="mailto:mzhao.mba2027@ivey.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</a>
                 <a class="team-link" href="https://www.linkedin.com/in/mikayla-zhao-cim%C2%AE-61b137103/" target="_blank" rel="noopener noreferrer">LinkedIn &#8594;</a>
@@ -448,178 +425,223 @@
       </div>
     </section>
 
-    <section id="methodology" class="accent-band">
+    <!-- ─── METHODOLOGY ───────────────────────────────────────────── -->
+    <section id="methodology">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Methodology</span>
-          <h2>How we approach the work.</h2>
-          <p>Our process mirrors what a client would expect from a professional consulting team: rigorous discovery, evidence-based analysis, and implementation-oriented thinking at every stage.</p>
+          <span class="section-label">Our Approach</span>
+          <h2>Rigorous research. Action and decision-oriented outcomes.</h2>
+          <p>Our process mirrors what a client would expect from a professional consulting team: thorough discovery, evidence-based synthesis, and thinking that is always anchored in what leadership can actually decide and act on.</p>
         </div>
         <div class="method-grid">
           <article class="card">
             <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M7 16V8"/><path d="M12 16V5"/><path d="M17 16v-4"/></svg></div>
             <h3>Primary Research</h3>
-            <p>Interviews, stakeholder conversations, and issue framing help us surface the realities behind the brief and identify what matters most to decision-makers.</p>
+            <p>Stakeholder interviews, expert conversations, and structured issue framing help us surface the realities behind the brief and identify what matters most to decision-makers.</p>
           </article>
           <article class="card">
             <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="M14 4v4h4"/><path d="M8 13h8"/><path d="M8 17h5"/></svg></div>
             <h3>Secondary Insights</h3>
-            <p>Industry structure, market dynamics, competitor moves, and operating benchmarks provide the external context needed to test the client&rsquo;s options.</p>
+            <p>Industry structure, market dynamics, competitor moves, and operating benchmarks provide the external context needed to pressure-test your options and identify blind spots.</p>
           </article>
           <article class="card">
             <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h10"/><path d="M10 6l6 6-6 6"/><path d="M20 4v16"/></svg></div>
-            <h3>Actionable Implementation</h3>
-            <p>We move beyond diagnosis by defining practical recommendations, sequencing priorities, and clarifying the path from insight to execution.</p>
+            <h3>Action &amp; Decision-Oriented</h3>
+            <p>We move beyond diagnosis to deliver clear recommendations, sequenced priorities, and the rationale your leadership team needs to make confident decisions and move forward.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ─── PROJECT TIMELINE ─────────────────────────────────────────── -->
+    <!-- ─── TIMELINE ──────────────────────────────────────────────── -->
     <section id="timeline">
       <div class="container">
         <div class="section-header">
           <span class="section-label">Project Timeline</span>
           <h2>What to expect, and when.</h2>
-          <p class="tl-intro">Our engagement runs from May to October 2026 across three structured phases. Click any phase to expand its details.</p>
+          <p class="tl-intro">Our engagement runs May–October 2026 across three stages, each resulting in a concrete deliverable. Click any card to see what's inside.</p>
         </div>
 
         <div class="tl-track">
-          <div class="tl-steps">
+          <!-- Visual connector row -->
+          <div class="tl-connector">
+            <div class="tl-node">
+              <div class="tl-circle phase1">1</div>
+              <div class="tl-node-label phase1">Scoping</div>
+            </div>
+            <div class="tl-arrow a1"></div>
+            <div class="tl-node">
+              <div class="tl-circle phase2">2</div>
+              <div class="tl-node-label phase2">Research</div>
+            </div>
+            <div class="tl-arrow a2"></div>
+            <div class="tl-node">
+              <div class="tl-circle phase3">3</div>
+              <div class="tl-node-label phase3">Solution Design</div>
+            </div>
+          </div>
+
+          <!-- Phase cards -->
+          <div class="tl-cards">
 
             <!-- Phase 1 -->
-            <div class="tl-step">
-              <div class="tl-dot-row"><div class="tl-dot phase1">1</div></div>
-              <div class="tl-card" id="phase1-card">
-                <div class="tl-card-header" onclick="togglePhase('phase1-card')" role="button" aria-expanded="false" aria-controls="phase1-body">
-                  <div class="tl-card-header-left">
-                    <span class="tl-badge phase1">Phase 1 &mdash; May &rarr; Jul 22</span>
-                    <h3>Scoping &amp; Research Strategy</h3>
-                    <div class="tl-due">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                      Due: July 22, 2026
-                    </div>
-                  </div>
-                  <div class="tl-chevron" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                  </div>
+            <div class="tl-card" id="phase1-card">
+              <div class="tl-card-top">
+                <div class="tl-card-top-icon phase1">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </div>
-                <div class="tl-card-body" id="phase1-body">
-                  <div class="tl-card-body-inner">
-                    <ul class="tl-deliverables">
-                      <li><span class="tl-check phase1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Define the central business problem &amp; strategic opportunity</li>
-                      <li><span class="tl-check phase1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Set SMART objectives aligned to your organization&rsquo;s priorities</li>
-                      <li><span class="tl-check phase1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Build an issue tree breaking the problem into workable components</li>
-                      <li><span class="tl-check phase1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Design primary &amp; secondary research plan</li>
-                      <li><span class="tl-check phase1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Submit scoping document; review with Faculty Supervisor &amp; EIR</li>
-                    </ul>
-                    <div class="tl-client-action">
-                      <strong>Your role as client</strong>
-                      Introductory meeting to align on scope; provide access to key contacts and background materials to help the team get up to speed quickly.
-                    </div>
+                <div class="tl-card-meta">
+                  <span class="tl-badge phase1">Phase 1 — May → Jul 22</span>
+                  <h3>Scoping</h3>
+                  <div class="tl-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Due July 22, 2026</div>
+                </div>
+              </div>
+              <div class="tl-deliverable-box phase1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Deliverable: Scoping Document
+              </div>
+              <div class="tl-card-header" onclick="togglePhase('phase1-card')" role="button" aria-expanded="false" aria-controls="phase1-body">
+                <span>What's in it</span>
+                <div class="tl-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+              </div>
+              <div class="tl-card-body" id="phase1-body">
+                <div class="tl-card-body-inner">
+                  <ul class="tl-points">
+                    <li><span class="tl-dot-sm"></span>Full problem definition — what the challenge is and why it matters</li>
+                    <li><span class="tl-dot-sm"></span>Our approach to resolution — the research and analytical plan</li>
+                    <li><span class="tl-dot-sm"></span>Timelines and rules of engagement — how we'll work together</li>
+                  </ul>
+                  <div class="tl-client-note">
+                    <strong>Your role as client</strong>
+                    An introductory meeting to align on scope; access to key contacts and background materials.
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Phase 2 -->
-            <div class="tl-step">
-              <div class="tl-dot-row"><div class="tl-dot phase2">2</div></div>
-              <div class="tl-card" id="phase2-card">
-                <div class="tl-card-header" onclick="togglePhase('phase2-card')" role="button" aria-expanded="false" aria-controls="phase2-body">
-                  <div class="tl-card-header-left">
-                    <span class="tl-badge phase2">Phase 2 &mdash; Jul 22 &rarr; Sep 1</span>
-                    <h3>Research &amp; Interim Report</h3>
-                    <div class="tl-due">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                      Due: September 1, 2026
-                    </div>
-                  </div>
-                  <div class="tl-chevron" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                  </div>
+            <div class="tl-card" id="phase2-card">
+              <div class="tl-card-top">
+                <div class="tl-card-top-icon phase2">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                 </div>
-                <div class="tl-card-body" id="phase2-body">
-                  <div class="tl-card-body-inner">
-                    <ul class="tl-deliverables">
-                      <li><span class="tl-check phase2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Conduct stakeholder interviews &amp; industry analysis</li>
-                      <li><span class="tl-check phase2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Gather &amp; synthesize primary and secondary research</li>
-                      <li><span class="tl-check phase2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Surface preliminary conclusions &amp; early insights</li>
-                      <li><span class="tl-check phase2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Flag any scope changes or risks to the work plan</li>
-                      <li><span class="tl-check phase2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Submit interim status report to Faculty Supervisor &amp; EIR</li>
-                    </ul>
-                    <div class="tl-client-action">
-                      <strong>Your role as client</strong>
-                      Interim check-in meeting to share feedback on preliminary findings and confirm research direction before the final push.
-                    </div>
+                <div class="tl-card-meta">
+                  <span class="tl-badge phase2">Phase 2 — Jul 22 → Sep 1</span>
+                  <h3>Research</h3>
+                  <div class="tl-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Due September 1, 2026</div>
+                </div>
+              </div>
+              <div class="tl-deliverable-box phase2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Deliverable: Interim Report
+              </div>
+              <div class="tl-card-header" onclick="togglePhase('phase2-card')" role="button" aria-expanded="false" aria-controls="phase2-body">
+                <span>What's in it</span>
+                <div class="tl-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+              </div>
+              <div class="tl-card-body" id="phase2-body">
+                <div class="tl-card-body-inner">
+                  <ul class="tl-points">
+                    <li><span class="tl-dot-sm"></span>Scope evolutions — any changes to the problem framing since kickoff</li>
+                    <li><span class="tl-dot-sm"></span>What we've learned — key findings from interviews and research</li>
+                    <li><span class="tl-dot-sm"></span>What we know at this stage — preliminary conclusions and hypotheses</li>
+                    <li><span class="tl-dot-sm"></span>How we'll use the remainder of the project — plan for Phase 3</li>
+                  </ul>
+                  <div class="tl-client-note">
+                    <strong>Your role as client</strong>
+                    An interim check-in to share feedback on early findings and confirm direction before the final push.
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Phase 3 -->
-            <div class="tl-step">
-              <div class="tl-dot-row"><div class="tl-dot phase3">3</div></div>
-              <div class="tl-card" id="phase3-card">
-                <div class="tl-card-header" onclick="togglePhase('phase3-card')" role="button" aria-expanded="false" aria-controls="phase3-body">
-                  <div class="tl-card-header-left">
-                    <span class="tl-badge phase3">Phase 3 &mdash; Sep 1 &rarr; Oct 26</span>
-                    <h3>Final Deck &amp; Presentation</h3>
-                    <div class="tl-due">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                      Due: October 26, 2026
-                    </div>
-                  </div>
-                  <div class="tl-chevron" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                  </div>
+            <div class="tl-card" id="phase3-card">
+              <div class="tl-card-top">
+                <div class="tl-card-top-icon phase3">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 </div>
-                <div class="tl-card-body" id="phase3-body">
-                  <div class="tl-card-body-inner">
-                    <ul class="tl-deliverables">
-                      <li><span class="tl-check phase3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Finalize analysis &amp; build evidence-based recommendations</li>
-                      <li><span class="tl-check phase3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Develop a detailed, sequenced implementation roadmap</li>
-                      <li><span class="tl-check phase3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Prepare executive slide deck (max 25 slides) &amp; written report</li>
-                      <li><span class="tl-check phase3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Pre-presentation review with Faculty Supervisor &amp; EIR</li>
-                      <li><span class="tl-check phase3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Live presentation to your senior leadership team</li>
-                    </ul>
-                    <div class="tl-client-action">
-                      <strong>Your role as client</strong>
-                      Attend the final presentation with your senior leadership team. Provide a brief confirmation letter acknowledging receipt of the completed project.
-                    </div>
+                <div class="tl-card-meta">
+                  <span class="tl-badge phase3">Phase 3 — Sep 1 → Oct 26</span>
+                  <h3>Solution Design</h3>
+                  <div class="tl-due"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Due October 26, 2026</div>
+                </div>
+              </div>
+              <div class="tl-deliverable-box phase3">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Deliverable: Final Presentation
+              </div>
+              <div class="tl-card-header" onclick="togglePhase('phase3-card')" role="button" aria-expanded="false" aria-controls="phase3-body">
+                <span>What's in it</span>
+                <div class="tl-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+              </div>
+              <div class="tl-card-body" id="phase3-body">
+                <div class="tl-card-body-inner">
+                  <ul class="tl-points">
+                    <li><span class="tl-dot-sm"></span>The solution — our recommended course of action, clearly argued</li>
+                    <li><span class="tl-dot-sm"></span>The rationale — evidence and analysis supporting each recommendation</li>
+                    <li><span class="tl-dot-sm"></span>Business case &amp; considerations — financial, operational, and strategic implications</li>
+                    <li><span class="tl-dot-sm"></span>Discussion — open Q&amp;A with your senior leadership team</li>
+                  </ul>
+                  <div class="tl-client-note">
+                    <strong>Your role as client</strong>
+                    Attend the final presentation with your senior leadership team. An engaged discussion is where the real value is unlocked.
                   </div>
                 </div>
               </div>
             </div>
 
-          </div><!-- .tl-steps -->
+          </div><!-- .tl-cards -->
         </div><!-- .tl-track -->
 
       </div>
     </section>
-    <!-- ─── END TIMELINE ──────────────────────────────────────────── -->
 
-    <!-- Partner With Us -->
-    <section id="partner">
+    <!-- ─── WHY CHOOSE US ─────────────────────────────────────────── -->
+    <section id="partner" class="accent-band">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Partner With Us</span>
-          <h2>Why companies choose the IFP.</h2>
-          <p>An IFP engagement gives your organization a fresh, unbiased look at a significant challenge &mdash; delivered by a motivated team of Ivey MBA students, supervised by world-class faculty and experienced <a class="text-link" href="https://www.ivey.uwo.ca/ifp/eir-profiles/" target="_blank" rel="noopener noreferrer">Executives-in-Residence</a>.</p>
+          <span class="section-label">Why Choose Us</span>
+          <h2>Frankly? It&rsquo;s a pretty unique opportunity.</h2>
+          <p>Where else do you get a team of six sharp, experienced MBA professionals — fully dedicated to your strategic challenge, for free? This is a rare chance to access the quality of thinking typically reserved for expensive consulting engagements, backed by world-class faculty and mentored by seasoned executives.</p>
         </div>
         <div class="partner-grid">
           <article class="card">
-            <h3>Company Benefits</h3>
-            <p class="card-intro">What your organization gains from an IFP engagement.</p>
+            <h3>What your organization gains</h3>
+            <p class="card-intro">A genuine consulting experience, not a student exercise.</p>
             <ul class="bullet-list">
-              <li><span class="bullet"></span><span>Obtain a fresh, unbiased perspective on a significant business issue, strategic opportunity, operational problem, or organizational challenge.</span></li>
-              <li><span class="bullet"></span><span>Work with a highly motivated and intelligent team of Ivey MBA students dedicated to your mandate.</span></li>
-              <li><span class="bullet"></span><span>Receive a professional consulting report supervised by world-class faculty and experienced mentors.</span></li>
-              <li><span class="bullet"></span><span>Gain exposure to the latest business ideas, tools, and frameworks directly applicable to your situation.</span></li>
-              <li><span class="bullet"></span><span>Access guidance from an accomplished Executive-in-Residence with relevant industry experience.</span></li>
-              <li><span class="bullet"></span><span>Evaluate students&rsquo; strategic capabilities first-hand &mdash; and identify future talent for your organization.</span></li>
-              <li><span class="bullet"></span><span>Partner with Ivey in the hands-on education of tomorrow&rsquo;s business leaders.</span></li>
+              <li><span class="bullet"></span><span>A fresh, unbiased perspective on a significant business issue — whether you&rsquo;re a blue-chip multinational, a fast-growing venture, or a nonprofit navigating change.</span></li>
+              <li><span class="bullet"></span><span>Six highly motivated MBA professionals who treat your mandate as their most important priority for the duration of the project.</span></li>
+              <li><span class="bullet"></span><span>Oversight from an Ivey faculty member and an Executive-in-Residence — a very experienced mentor who has or currently holds C-level responsibilities, with most having deep consulting experience.</span></li>
+              <li><span class="bullet"></span><span>Exposure to the latest strategic frameworks, tools, and thinking applied directly to your situation.</span></li>
+              <li><span class="bullet"></span><span>A first-hand look at the strategic capabilities of talented professionals — and a natural pipeline for future talent.</span></li>
+              <li><span class="bullet"></span><span>A fully confidential engagement, protected by Ivey NDAs crafted specifically for this program to protect your data while empowering us to mobilize the best of the Western community.</span></li>
             </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT THE IFP (moved to bottom) ──────────────────────── -->
+    <section id="ifp">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">About the Program</span>
+          <h2>Grounded in over 65 years of field consulting.</h2>
+          <p>The Ivey MBA Field Project is a cornerstone of the Ivey Business School experience — a professional consulting relationship, not a classroom simulation. Each engagement is built around a significant, real strategic challenge, with the client&rsquo;s senior leadership as the primary audience for all deliverables.</p>
+        </div>
+        <div class="value-grid">
+          <article class="card soft">
+            <h3>Client Commitment</h3>
+            <p>We ask for your time at three key moments: a scoping meeting, an interim check-in, and the final presentation. Beyond that, access to relevant context and contacts helps us hit the ground running.</p>
+          </article>
+          <article class="card soft">
+            <h3>Access to Information</h3>
+            <p>To properly assess your challenge, we&rsquo;ll need timely access to relevant internal information. We treat everything we receive with the same discretion as a retained consulting firm.</p>
+          </article>
+          <article class="card soft">
+            <h3>Confidentiality</h3>
+            <p>All engagements are governed by Ivey NDAs crafted specifically for the Field Project program. These protect your confidential information fully while empowering the team to mobilize the broader Western University community on your behalf.</p>
           </article>
         </div>
       </div>
@@ -633,7 +655,7 @@
       <div class="footer-contact-list">
         <div>
           <div class="footer-contact-name">S&eacute;bastien de la Lande</div>
-          <div class="footer-contact-role">Faculty</div>
+          <div class="footer-contact-role">Faculty Supervisor</div>
           <div class="footer-contact-links">
             <a href="https://www.linkedin.com/in/sdelalande/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="mailto:sdelalande@ivey.ca">sdelalande@ivey.ca</a>
